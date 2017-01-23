@@ -9,8 +9,8 @@ const removeItemButton = document.querySelector('button.removeItemButton');
 
 
 listDiv.addEventListener('click', (event) => {
-	if (event.target.tagName == 'LI') {
-		let li = event.target;
+	if (event.target.tagName == 'BUTTON') {
+		let li = event.target.parentNode;
 		let ul = li.parentNode;
 		ul.removeChild(li);
 	}
