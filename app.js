@@ -3,17 +3,27 @@ const listDiv = document.querySelector('.list');
 const decriptionInput = document.querySelector('input.description');
 const descriptionP = document.querySelector('p.description');
 const descriptionButton = document.querySelector('button.description');
-const addItemInput = document.querySelector('input.addItemInput'); 
-const addItemButton = document.querySelector('button.addItemButton'); 
+const addItemInput = document.querySelector('input.addItemInput');
+const addItemButton = document.querySelector('button.addItemButton');
 const removeItemButton = document.querySelector('button.removeItemButton');
+
+
+listDiv.addEventListener('click', (event) => {
+	if (event.target.tagName == 'LI') {
+		let li = event.target;
+		let ul = li.parentNode;
+		ul.removeChild(li);
+	}
+});
+
 
 toggleList.addEventListener('click', () => {
 	if (listDiv.style.display == 'none') {
 		toggleList.textContent = 'Hide list';
 		listDiv.style.display = 'block';
 	} else {
-		toggleList.textContent = 'Show list';  
-		listDiv.style.display = 'none'; 
+		toggleList.textContent = 'Show list';
+		listDiv.style.display = 'none';
 	}
 });
 
