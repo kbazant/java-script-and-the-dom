@@ -3,22 +3,17 @@ const listDiv = document.querySelector('.list');
 const decriptionInput = document.querySelector('input.description');
 const descriptionP = document.querySelector('p.description');
 const descriptionButton = document.querySelector('button.description');
-
 const addItemInput = document.querySelector('input.addItemInput');
 const addItemButton = document.querySelector('button.addItemButton');
 const removeItemButton = document.querySelector('button.removeItemButton');
 
 listDiv.addEventListener('mouseover', (event) => {
 	if (event.target.tagName == 'LI') {
-		event.target.textContent = event.target.textContent.toUpperCase();
+		
 	}
 });
 
-listDiv.addEventListener('mouseout', (event) => {
-	if (event.target.tagName == 'LI') {
-		event.target.textContent = event.target.textContent.toLowerCase();
-	}
-});
+
 
 
 toggleList.addEventListener('click', () => {
